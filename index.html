@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,11 +15,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2326808157784991');
+fbq('init', '536283636234266');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2326808157784991&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=536283636234266&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
       <style> 
@@ -68,7 +67,7 @@ src="https://www.facebook.com/tr?id=2326808157784991&ev=PageView&noscript=1"
 
         }
         .button {
-          background:#0088cc;
+           background: grey;
             display: inline-block;
             padding: 15px 40px;
            
@@ -81,7 +80,12 @@ src="https://www.facebook.com/tr?id=2326808157784991&ev=PageView&noscript=1"
             cursor: pointer;
         }
 
-        
+
+.button.active{
+    background:#0088cc;
+    color:#fff;
+    cursor:pointer;
+}
     a{
     text-decoration: none;
     color: #0088cc;
@@ -94,13 +98,34 @@ src="https://www.facebook.com/tr?id=2326808157784991&ev=PageView&noscript=1"
    <div class="container">
          <h2>Welcome to our official Telegram channel</h2>
         <p>Be part of our fast-growing Telegram family — free updates and valuable content.</p>
-        <a class="button" href="https://telegram.me/+4JdUycm-MGU5ZTll">Join Telegram Now</a><br>
+        <a id="joinBtn" class="button"> Please wait 3s </a><br>
         <img src="images.jpg">      
-        <p>Ads Setup By <a href="https://telegram.me/+GYgJmKWI8AhiNzVl"> @manish</a></p>     
+        <p>Ads Setup By <a href="https://telegram.me/+G03tQQx4RJU4ZTI1"> @AIVON</a></p>     
     </div>
+<script>
+const btn = document.getElementById("joinBtn");
+let time = 3;
 
+const countdown = setInterval(() => {
+    time--;
+    btn.innerText = "Please wait " + time + "s";
+
+    if (time <= 0) {
+        clearInterval(countdown);
+        btn.classList.add("active");
+        btn.innerText = "Join Telegram Now";
+    }
+}, 1000);
+
+btn.addEventListener("click", () => {
+    if (btn.classList.contains("active")) {
+        window.location.href = "https://telegram.me/+CTZSaUxYDmE1MjQ1";
+    }
+});
+</script>
 </body>
 </html>
+
 
 
 
